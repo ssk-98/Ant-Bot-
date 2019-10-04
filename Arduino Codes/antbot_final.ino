@@ -13,7 +13,8 @@
  *global variables :posleft_sensor_data,right_sensor_data,center_sensor_data,spd,spdstr
 */
 
-#include<Servo.h>
+#include<Servo.h> // declaration of header file for servo motor
+
 //PWM Pins Defination
 #define MOT1_EN 6
 #define MOT2_EN 7
@@ -53,7 +54,7 @@ void setup()
   pinMode(MOT2_IN1,OUTPUT);
   pinMode(MOT2_IN2,OUTPUT);
   pinMode(SENSOR1,INPUT);                /*defining input and
-                                             output pins*/
+                                             output pins is done in void setup()*/
                                
   pinMode(SENSOR3,INPUT);
   pinMode(SENSOR5,INPUT);
@@ -293,7 +294,7 @@ void hard_left(){
  *Logic         : in order to facilitate the rotation of the servo motor we are digitally writing angle values in a for loop 
  *Example Call  : left_servo_to_close()
  */
-  void left_servo_to_close()
+  void left_servo_to_close() //left servo motor closing mechanism
 {
   
  for(int m=150;m>70;m--)
@@ -313,7 +314,7 @@ void hard_left(){
  *Logic         : in order to facilitate the rotation of the servo motor we are digitally writing angle values in a for loop 
  *Example Call  : left_servo_to_open()
  */
-void left_servo_to_open()
+void left_servo_to_open() //left servo motor opening mechanism 
 {
   
  for(int n=70;n>150;n++)
@@ -332,7 +333,7 @@ void left_servo_to_open()
  *Logic         : in order to facilitate the rotation of the servo motor we are digitally writing angle values in a for loop 
  *Example Call  : right_servo_to_close()
  */
- void right_servo_to_close()
+ void right_servo_to_close() //right servo motor closing mechanism
  {
   
   for(int o=50;o<130;o++)
@@ -349,7 +350,7 @@ void left_servo_to_open()
  *Logic         : in order to facilitate the rotation of the servo motor we are digitally writing angle values in a for loop 
  *Example Call  : right_servo_to_open()
  */
- void right_servo_to_open()
+ void right_servo_to_open() //right servo opening mechanism
  {
   
   for(int p=130;p>50;p--)
