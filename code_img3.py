@@ -131,7 +131,7 @@ def color_detect(img):
     cv2.putText(result_image,str(tuple1),(cx1,cy1), font, 0.5,(0,0,0),2,cv2.LINE_AA)
     
     cv2.imshow("ColorImage",result_image)
-    cv2.waitKey(0)
+    cv2.waitKey(1)
 
     
     
