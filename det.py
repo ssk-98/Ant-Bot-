@@ -72,7 +72,7 @@ def aruco_detect(path_to_image):
     allowed to modify in aruco_lib.py!!!
     '''
     img = cv2.imread(path_to_image)     #give the name of the image with the complete path
-    id_aruco_trace = 0
+    id_aruco_trace = 1
     det_aruco_list = {}
     img2 = img[0:400,0:400,:]   #separate out the Aruco image from the whole image
     cv2.imshow('frame',img2)
